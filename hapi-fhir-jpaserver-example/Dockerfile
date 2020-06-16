@@ -1,4 +1,2 @@
-FROM jetty:9-jre8-alpine
-USER jetty:jetty
-ADD ./target/hapi-fhir-jpaserver-example.war /var/lib/jetty/webapps/root.war
-EXPOSE 8080
+FROM fabric8/jetty-9
+ADD ./target/hapi-fhir-jpaserver-example.war /deployments/root.war
